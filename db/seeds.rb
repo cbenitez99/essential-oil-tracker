@@ -4,4 +4,4 @@
 # Examples:
 #
 puts "****Seeding****"
-Oil.create([{ name: "Lavender" }, { price: 25 }])
+Oil.create([{ name: "Lavender", price: 25 }])

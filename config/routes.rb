@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
-
-  root 'oils#index'
-
-  resources :oils do
-  get "/oils", to: 'oils#index'
+  scope '/api/version1' do
+    resources :oils
   end
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  # Defines the root path route ("/")
-  # root "articles#index"
 end

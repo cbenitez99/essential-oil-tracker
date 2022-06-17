@@ -3,7 +3,7 @@
 #
 # Examples:
 #
-puts "****Seeding****"
+puts "****Seeding Oils****"
 Oil.create([{ name: "Lavender", price: 25 }])
 Oil.create([{ name: "Peppermint", price: 30 }])
 Oil.create([{ name: "OnGaurd", price: 35 }])

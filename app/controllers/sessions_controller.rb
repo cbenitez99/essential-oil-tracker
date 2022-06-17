@@ -9,5 +9,10 @@ class SessionsController < ApplicationController
             render json: {errors: ["Invalid username or password"]}, status: :unprocessable_entity
         end
     end
-    
+
+    def destroy 
+        session.clear
+        render json: {"loggedOut": true}
+    end
+
 end

@@ -14,8 +14,14 @@ class OilsController < ApplicationController
         if oil
             render json: oil, status: :ok
         else
-            render json: {error: ["No oil to show"]}
+            render json: {error: ["No oil to show"]}, status: :not_found
         end
+    end
+
+    private
+
+    def find_oil
+        Oil.find_by(id: params[:id])
     end
 
 

@@ -5,7 +5,7 @@ class OilsController < ApplicationController
         if oils
             render json: oils, status: :ok
         else
-            render json: { error: ["Error, no oils to show"]}, status: :not_found
+            render json: {error: ["Error, no oils to show"]}, status: :not_found
         end
     end
 
@@ -14,7 +14,7 @@ class OilsController < ApplicationController
         if oil
             render json: oil, status: :ok
         else
-            render json {error: ["No oil to show"]}
+            render json: {error: ["No oil to show"]}
         end
     end
 

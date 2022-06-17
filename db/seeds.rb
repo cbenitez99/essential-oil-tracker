@@ -3,6 +3,8 @@
 #
 # Examples:
 #
+user = User.create!(username: "Cristian", password_digest: "coder123")
+
 puts "****Seeding Oils****"
 Oil.create([{ name: "Lavender", price: 25 }])
 Oil.create([{ name: "Peppermint", price: 30 }])

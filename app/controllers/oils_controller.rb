@@ -33,5 +33,9 @@ class OilsController < ApplicationController
         Oil.find_by(id: params[:id])
     end
 
+    def oil_params
+        params.require(:oil).permit(:name, :price, :user_id)
+    end
+
 
 end

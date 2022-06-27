@@ -18,6 +18,15 @@ class OilsController < ApplicationController
         end
     end
 
+    def create 
+        oil = Oil.new(oil_params)
+        if oil.save
+            render json: oil, status: :created
+        else
+            render json: {errors: ["Could not add oil"]}, status: :unprocessable_entity
+        end
+    end
+
     private
 
     def find_oil

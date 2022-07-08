@@ -3,11 +3,11 @@
 #
 # Examples:
 #
-# user = User.create!(username: "Cristian", password_digest: "coder123")
+user = User.create!(username: "Cristian", password: "coder123")
 
 puts "****Seeding Oils****"
-# Oil.create([{ name: "Lavender", price: 25, user_id: user.id }])
-# Oil.create([{ name: "Peppermint", price: 30, user_id: user.id }])
-# Oil.create([{ name: "OnGaurd", price: 35, user_id: user.id }])
+Oil.create([{ name: "Lavender", price: 25, user_id: user.id }])
+Oil.create([{ name: "Peppermint", price: 30, user_id: user.id }])
+Oil.create([{ name: "OnGaurd", price: 35, user_id: user.id }])
 
-puts "Done.."
+puts "Done..."

@@ -6,8 +6,8 @@
 user = User.create!(username: "Cristian", password: "coder123")
 
 puts "****Seeding Oils****"
-Oil.create([{ name: "Lavender", price: 25, user_id: user.id }])
-Oil.create([{ name: "Peppermint", price: 30, user_id: user.id }])
-Oil.create([{ name: "OnGaurd", price: 35, user_id: user.id }])
+oil1 = Oil.create([{ name: "Lavender", price: 25, user_id: user.id }])
+oil2 = Oil.create([{ name: "Peppermint", price: 30, user_id: user.id }])
+oil3 = Oil.create([{ name: "OnGaurd", price: 35, user_id: user.id }])
 
 puts "Done..."

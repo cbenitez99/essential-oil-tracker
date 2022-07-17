@@ -27,6 +27,16 @@ class OilsController < ApplicationController
         end
     end
 
+    def destroy
+        oil = find_oil
+        if oil
+            oil.destroy
+            head :no_content
+        else
+            render json: {error: "Oil not found. See controller||client"}
+        end
+    end
+
     private
 
     def find_oil

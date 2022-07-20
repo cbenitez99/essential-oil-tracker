@@ -1,5 +1,15 @@
 class UsersController < ApplicationController
     
+    def index
+        users = User.all
+        if users
+            render json: users, status: :ok
+        else
+            render json: {error: ["No users to show"]}, status: :not_found
+        end
+    end
+
+
     def create
         user = User.new(user_params)
         if user.save

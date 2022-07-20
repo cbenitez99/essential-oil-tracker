@@ -1,10 +1,9 @@
-class CreateOils < ActiveRecord::Migration[7.0]
+class CreateAllProducts < ActiveRecord::Migration[7.0]
   def change
-    create_table :oils do |t|
+    create_table :all_products do |t|
       t.string :name
       t.integer :price
       t.integer :amount
-      t.integer :user_id
 
       t.timestamps
     end

@@ -1,3 +1,3 @@
 class OilSerializer < ActiveModel::Serializer
-    attributes :id, :name, :price, :created_at
+    attributes :id, :name, :price, :amount, :created_at
   end

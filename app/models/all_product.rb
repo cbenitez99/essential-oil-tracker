@@ -1,2 +1,0 @@
-class AllProduct < ApplicationRecord
-end

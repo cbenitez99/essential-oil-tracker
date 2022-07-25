@@ -44,7 +44,7 @@ class UserOilsController < ApplicationController
     end
 
     def user_oil_params
-        params.require(:UserOil).permit(:name, :price, :amount, :user_id)
+        params.permit(:name, :price, :amount, :user_id)
     end
 
 

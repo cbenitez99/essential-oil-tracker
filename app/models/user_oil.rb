@@ -3,6 +3,4 @@ class UserOil < ApplicationRecord
     validates :name, presence: true
     validates :price, presence: true
     validates :amount, presence: true
-    validates :user_id, presence: true
-
 end

@@ -23,7 +23,7 @@ class UserOilsController < ApplicationController
         if user_oil.save
             render json: user_oil, status: :created
         else
-            render json: {errors: ["Could not add user oil."]}, status: :unprocessable_entity
+            render json: {errors: user_oil.errors.full_messages}, status: :unprocessable_entity
         end
     end
 

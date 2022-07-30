@@ -33,7 +33,17 @@ class UserOilsController < ApplicationController
             user_oil.destroy
             head :no_content
         else
-            render json: {error: "User oil not found. See controller or client"}
+            render json: {error: "User oil not found. See controller or client"}, status: :not_found
+        end
+    end
+
+    def update 
+        user_oil = find_user_oil
+        if user_oil
+            user_oil.update(user_oil_params)
+            render json: user_oil
+        else
+            render json: {error: "No Oil Found!"}
         end
     end
 
